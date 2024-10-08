@@ -5,7 +5,7 @@ services:
     build:
       context: ./backend
     ports:
-      - "8000:80"
+      - "8000:80"  # Backend estará en el puerto 8000
     volumes:
       - ./backend:/var/www/html
     depends_on:
@@ -15,15 +15,60 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: user
-      MYSQL_PASSWORD: userpassword
+      MYSQL_ROOT_PASSWORD: P4$$w0rd
+      MYSQL_DATABASE: sistematizaciondatos_com
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
       - ./backend/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
 
+  frontend:
+    image: nginx:latest
+    ports:
+      - "8080:80"  # Frontend estará en el puerto 8080
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+    depends_on:
+      - app  # Asegura que el backend esté levantado primero
+    networks:
+      - webnet
+
 volumes:
   db_data:
+
+networks:
+  webnet:
+
+# version: '3.8'
+
+# services:
+#   app:
+#     build:
+#       context: ./backend
+#     ports:
+#       - "8000:80"
+#     volumes:
+#       - ./backend:/var/www/html
+#     depends_on:
+#       - db
+
+#   db:
+#     image: mysql:5.7
+#     restart: always
+#     environment:
+#       MYSQL_ROOT_PASSWORD: P4$$w0rd
+#       MYSQL_DATABASE: sistematizaciondatos_com
+#       MYSQL_USER: admin
+#       MYSQL_PASSWORD: password
+#     ports:
+#       - "3306:3306"
+#     volumes:
+#       - db_data:/var/lib/mysql
+#       - ./backend/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+#       # - ./backend/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+# volumes:
+#   db_data:

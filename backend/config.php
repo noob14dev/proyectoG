@@ -1,6 +1,6 @@
 <?php
 define('DB_HOST', 'db');
-define('DB_USER', 'user');
-define('DB_PASSWORD', 'userpassword');
-define('DB_NAME', 'mydatabase');
+define('DB_USER', 'admin');
+define('DB_PASSWORD', 'password');
+define('DB_NAME', 'sistematizaciondatos_com');
 ?>
