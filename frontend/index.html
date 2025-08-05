@@ -1,14 +1,162 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gráficas con Highcharts</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Graphics/scatter_plot.css">
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="js/chart.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        
+    <title>Document</title>
 </head>
 <body>
-    <div id="container" style="width:100%; height:400px;">
-   Hello World
-    </div>
+    <header>
+        <h1>Subsistema de visualización estadistica</h1>
+        <h2>Gestion de resultados de aprendizaje</h2>
+    </header>
+    <main>
+        <div class="carrer">
+            <label for="">Proyecto curricular</label>
+            <select name="" id="select_project" onchange="validateOptions()">
+                <option value="">Seleccione una opcion</option>
+                <option value="578">Tecnología en Sistematización de datos</option>
+                <option value="678">Inegniería telemática</option>
+            </select>
+        </div>
+        <div>
+            <div class="time">
+                <label for="">Periocidad</label>
+                <select name="" id="select_periodicity" onchange="validateOptions()">
+                    <option value="">Seleccione una opcion</option>
+                    <option value="0">Permanencia en semestres</option>
+                    <option value="1">Semestre de ingreso</option>
+                </select>
+            </div>
+            <!-- <div id="div_component" class="component">
+                <label for="">Componente</label>
+                <select name="" id="select_component" onchange="validateOptions()">
+                    <option value="">Seleccione una opcion</option>
+                    <option value="1">Componente Propedéutico</option>
+                    <option value="2">Area Básica de Ingeniería</option>
+                    <option value="3">Area de Ciencias Básicas</option>
+                    <option value="4">Area de Ingeniería Aplicada</option>
+                    <option value="5">Area Socio Humanística</option>
+                    <option value="6">Area Económico Administratriva</option>
+                    <option value="7">Segunda Lengua</option>
+                </select>
+            </div>  -->
+            <div id="div_component" class="component">
+                <label for="">Componente</label>
+                <select name="" id="select_component" onchange="validateOptions()">
+                    <option value="">Seleccione una opcion</option>
+                    <option value="1">Obligatorio Básico</option>
+                    <option value="2">Obligatorio Complementario</option>
+                    <option value="3">Electivo Intrínseco</option>
+                    <option value="4">Componente Propedéutico</option>
+                </select>
+            </div> 
+        </div>
+        
+        <!-- <div class="buttons">
+            <select name="opciones" id="selector">
+                <option value="A" id="area">Boton de area</option>
+                <option value="T" id="time">Boton de Tiempo</option>
+            </select>
+            <button id="btn-enviar">graficar</button>
+        </div>
+        <button id="btn-area">Area</button>
+        <button id="btn-time">Time</button>
+        
+        <div class="graphic">
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+                <p class="highcharts-description">
+                Chart demonstrating using an arearange series in combination with a line                 series. In this case, the arearange series is used to visualize thetemperature range per day, while the line series shows the average                 temperature.
+                </p>
+          </figure>
+        </div>
+        <div class="carrer">
+            <select name="carrer" id="carrer" required>
+                <option value="">Seleccione una opcion</option>
+                <option value="">Año estudiantil</option>
+                <option value="">Permanencia en semestres</option>
+            </select>
+        </div>
+        <div class="type-view">
+            <select name="type-view" id="type-view" required>
+                <option value="">Seleccione una opcion</option>
+                <option value="">Año estudiantil</option>
+                <option value="">Permanencia en semestres</option>
+            </select>
+        </div>
+        <div class="check-box componentes">
+            <input type="checkbox" id="componente_1">
+            <label for="componente_1">Componente 1</label>
+            <br>
+            <input type="checkbox" id="componente_2">
+            <label for="componente_2">Componente 2</label>
+            <br>
+            <input type="checkbox" id="componente_3">
+            <label for="componente_3">Componente 3</label>
+            <br>
+            <input type="checkbox" id="componente_4">
+            <label for="componente_4">Componente 4</label>
+            <br>
+            <input type="checkbox" id="componente_5">
+            <label for="componente_5">Componente 5</label>
+            <br>            
+            <input type="checkbox" id="componente_6">
+            <label for="componente_6">Componente 6</label>
+        </div> -->
+        <!-- High chars -->
+        
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+            <p class="highcharts-description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Quo amet explicabo nam dolorem consectetur harum sit reiciendis 
+                commodi recusandae labore vitae fugiat quidem perspiciatis aspernatur mollitia quasi, 
+                sint magni. 
+                Ipsa?
+            </p>
+        </figure>
+    </main>
+    <footer>
+        <ul>Creado por:
+            <li>Andres Felipe Olaya Castro</li>
+            <li>Juan Camilo Larrota Ruiz</li>
+        </ul>
+        <p>
+            Universidad Distrital Francisco José de Caldas
+        </p>
+    </footer>
+    <script src="Graphics/scatter_plot.js"></script>
+    <script src="main.js"></script>
 </body>
+<script>
+    let div_component = document.getElementById("div_component");
+    div_component.style = "display:none";
+    function validateOptions(){
+        let project = document.getElementById("select_project").value;
+        let periodicity = document.getElementById("select_periodicity").value;
+        let component = document.getElementById("select_component").value;
+
+        if(project != "" && periodicity != "" /*&& component != ""*/){
+            // alert("Validado");
+            div_component.style = "display:block";
+            if(component != ""){
+                getInfo(project,periodicity,component);
+            }
+        }else{
+            div_component.style = "display:none";
+            div_component.value = "";
+        }
+    }
+</script>
 </html>

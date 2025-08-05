@@ -1,11 +1,12 @@
 <?php
-include 'config.php';
+header('Content-Type: application/json');
 
-$connection = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+// Importa la configuración de conexión
+require_once 'config.php';
 
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
-
-echo "Connected successfully";
-?>
+// Simple prueba de respuesta
+echo json_encode([
+    'status' => 'success',
+    'message' => 'Conexión exitosa a la base de datos',
+    'database' => getenv('MYSQL_DATABASE')
+]);

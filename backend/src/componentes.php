@@ -2,6 +2,7 @@
 // Incluir el archivo de configuración
 include_once '../config.php';
 
+
 // Verificar la conexión
 if ($conexion->connect_error) {
     die(json_encode(["error" => "Error de conexión: " . $conexion->connect_error]));
@@ -11,7 +12,7 @@ if ($conexion->connect_error) {
 $conexion->set_charset("utf8mb4");
 
 // Consulta para obtener el código y la descripción de res_resultados_de_aprendizaje
-$consulta = "SELECT codigo, descripcion FROM res_resultados_de_aprendizaje";
+$consulta = "SELECT codigo, nombre FROM res_componente";
 
 // Ejecutar la consulta
 $resultado = $conexion->query($consulta);

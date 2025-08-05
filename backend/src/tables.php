@@ -1,9 +1,8 @@
 
 <?php
 // Asegurarse de que la conexión a la base de datos esté establecida
-include_once '../config.php';
-
-$conexion = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+// include_once '../config.php';
+require_once '../config.php';
 
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);

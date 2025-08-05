@@ -11,7 +11,7 @@ if ($conexion->connect_error) {
 $conexion->set_charset("utf8mb4");
 
 // Consulta para obtener el código y la descripción de res_resultados_de_aprendizaje
-$consulta = "SELECT codigo, descripcion FROM res_resultados_de_aprendizaje";
+$consulta = "SELECT codigo, nombre FROM res_clasifica_espacio";
 
 // Ejecutar la consulta
 $resultado = $conexion->query($consulta);
