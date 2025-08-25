@@ -1,0 +1,62 @@
+Componentes:
+
+[
+ {"codigo":"1","componente":"1"},   // Algoritmo Inédito → Obligatorio Básico
+ {"codigo":"2","componente":"1"},   // Programa Inédito → Obligatorio Básico
+ {"codigo":"3","componente":"1"},   // Diagrama de Arquitectura → Obligatorio Básico
+ {"codigo":"4","componente":"4"},   // Documento Técnico → Propedéutico
+ {"codigo":"5","componente":"1"},   // Documento de Arquitectura → Obligatorio Básico
+ {"codigo":"6","componente":"1"},   // Modelo lógico de Datos → Obligatorio Básico
+ {"codigo":"7","componente":"1"},   // Modelo Físico de Datos → Obligatorio Básico
+ {"codigo":"8","componente":"1"},   // Modelo de Arquitectura → Obligatorio Básico
+ {"codigo":"9","componente":"1"},   // API → Obligatorio Básico
+ {"codigo":"10","componente":"1"},  // Front → Obligatorio Básico
+ {"codigo":"11","componente":"1"},  // Middleware → Obligatorio Básico
+ {"codigo":"12","componente":"1"},  // Backend → Obligatorio Básico
+ {"codigo":"13","componente":"2"},  // Tesis → Obligatorio Complementario
+ {"codigo":"14","componente":"2"},  // Anteproyecto → Obligatorio Complementario
+ {"codigo":"15","componente":"2"},  // Artículo → Obligatorio Complementario
+ {"codigo":"16","componente":"1"},  // Diseño de Red → Obligatorio Básico
+ {"codigo":"17","componente":"1"},  // Diseño Eléctrico → Obligatorio Básico
+ {"codigo":"18","componente":"3"},  // Planeación Estratégica → Electivo Intrínseco
+ {"codigo":"19","componente":"1"},  // Simulador Educativo → Obligatorio Básico
+ {"codigo":"20","componente":"1"},  // AVA → Obligatorio Básico
+ {"codigo":"21","componente":"1"},  // OVA → Obligatorio Básico
+ {"codigo":"22","componente":"1"},  // Aplicación Móvil → Obligatorio Básico
+ {"codigo":"23","componente":"1"},  // Sistema Experto → Obligatorio Básico
+ {"codigo":"24","componente":"1"},  // Red Neuronal → Obligatorio Básico
+ {"codigo":"25","componente":"1"},  // Ecuación Resuelta → Obligatorio Básico
+ {"codigo":"26","componente":"1"},  // Ecuación Planteada → Obligatorio Básico
+ {"codigo":"27","componente":"1"},  // Ecuación Interpretada → Obligatorio Básico
+ {"codigo":"28","componente":"3"},  // Cronograma → Electivo Intrínseco
+ {"codigo":"29","componente":"3"},  // Plan de Negocios → Electivo Intrínseco
+ {"codigo":"30","componente":"3"},  // Análisis de Riesgos → Electivo Intrínseco
+ {"codigo":"31","componente":"3"},  // Implementación de una Norma → Electivo Intrínseco
+ {"codigo":"32","componente":"3"},  // Plan de Calidad → Electivo Intrínseco
+ {"codigo":"33","componente":"3"},  // Plan de Mejoramiento → Electivo Intrínseco
+ {"codigo":"34","componente":"4"},  // Metodología → Propedéutico
+ {"codigo":"35","componente":"3"},  // Plan de Integración → Electivo Intrínseco
+ {"codigo":"36","componente":"3"},  // Plan de Seguridad → Electivo Intrínseco
+ {"codigo":"37","componente":"1"},  // Juego → Obligatorio Básico
+ {"codigo":"38","componente":"1"},  // Aplicación Stand Alone → Obligatorio Básico
+ {"codigo":"39","componente":"1"},  // Aplicación Multiplataforma → Obligatorio Básico
+ {"codigo":"40","componente":"1"},  // Diseño de Navegación → Obligatorio Básico
+ {"codigo":"41","componente":"3"},  // CRM → Electivo Intrínseco
+ {"codigo":"42","componente":"4"},  // Metodología para Implementar una Norma → Propedéutico
+ {"codigo":"43","componente":"3"},  // Estudio de Viabilidad → Electivo Intrínseco
+ {"codigo":"44","componente":"1"},  // Modelo de Optimización → Obligatorio Básico
+ {"codigo":"45","componente":"1"},  // Aplicación Web → Obligatorio Básico
+ {"codigo":"46","componente":"1"},  // Aplicación Empotrada → Obligatorio Básico
+ {"codigo":"47","componente":"1"},  // Modelo Arquitectónico → Obligatorio Básico
+ {"codigo":"48","componente":"1"},  // Sistema de Gestión de Conocimiento → Obligatorio Básico
+ {"codigo":"49","componente":"1"},  // Patrón de Diseño → Obligatorio Básico
+ {"codigo":"50","componente":"4"},  // Propuesta de Investigación → Propedéutico
+ {"codigo":"51","componente":"1"},  // Red Implementada → Obligatorio Básico
+ {"codigo":"52","componente":"1"},  // Simulación → Obligatorio Básico
+ {"codigo":"53","componente":"1"},  // Modelado Matemático → Obligatorio Básico
+ {"codigo":"54","componente":"3"},  // Plan de Gestión → Electivo Intrínseco
+ {"codigo":"55","componente":"1"},  // Análisis de un sistema → Obligatorio Básico
+ {"codigo":"56","componente":"1"},  // Diseño de un Sistema → Obligatorio Básico
+ {"codigo":"57","componente":"3"}   // Estado Financiero → Electivo Intrínseco
+]
+

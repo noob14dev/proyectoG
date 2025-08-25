@@ -1,0 +1,60 @@
+[
+ {"codigo":"1","componente":"1"},  // Algoritmo Inédito → Propedéutico
+ {"codigo":"2","componente":"3"},  // Programa Inédito → Básica Ingeniería
+ {"codigo":"3","componente":"4"},  // Diagrama de Arquitectura → Ing. Aplicada
+ {"codigo":"4","componente":"1"},  // Documento Técnico → Propedéutico
+ {"codigo":"5","componente":"4"},  // Documento de Arquitectura → Ing. Aplicada
+ {"codigo":"6","componente":"3"},  // Modelo lógico de Datos → Básica Ingeniería
+ {"codigo":"7","componente":"3"},  // Modelo Físico de Datos → Básica Ingeniería
+ {"codigo":"8","componente":"4"},  // Modelo de Arquitectura → Ing. Aplicada
+ {"codigo":"9","componente":"3"},  // API → Básica Ingeniería
+ {"codigo":"10","componente":"3"}, // Front → Básica Ingeniería
+ {"codigo":"11","componente":"3"}, // Middleware → Básica Ingeniería
+ {"codigo":"12","componente":"3"}, // Backend → Básica Ingeniería
+ {"codigo":"13","componente":"5"}, // Tesis → Socio Humanística
+ {"codigo":"14","componente":"5"}, // Anteproyecto → Socio Humanística
+ {"codigo":"15","componente":"5"}, // Artículo → Socio Humanística
+ {"codigo":"16","componente":"4"}, // Diseño de Red → Ing. Aplicada
+ {"codigo":"17","componente":"4"}, // Diseño Eléctrico → Ing. Aplicada
+ {"codigo":"18","componente":"6"}, // Planeación Estratégica → Econ. Administrativa
+ {"codigo":"19","componente":"4"}, // Simulador Educativo → Ing. Aplicada
+ {"codigo":"20","componente":"4"}, // AVA → Ing. Aplicada
+ {"codigo":"21","componente":"4"}, // OVA → Ing. Aplicada
+ {"codigo":"22","componente":"4"}, // Aplicación Móvil → Ing. Aplicada
+ {"codigo":"23","componente":"4"}, // Sistema Experto → Ing. Aplicada
+ {"codigo":"24","componente":"4"}, // Red Neuronal → Ing. Aplicada
+ {"codigo":"25","componente":"2"}, // Ecuación Resuelta → Ciencias Básicas
+ {"codigo":"26","componente":"2"}, // Ecuación Planteada → Ciencias Básicas
+ {"codigo":"27","componente":"2"}, // Ecuación Interpretada → Ciencias Básicas
+ {"codigo":"28","componente":"6"}, // Cronograma → Econ. Administrativa
+ {"codigo":"29","componente":"6"}, // Plan de Negocios → Econ. Administrativa
+ {"codigo":"30","componente":"6"}, // Análisis de Riesgos → Econ. Administrativa
+ {"codigo":"31","componente":"6"}, // Implementación de una Norma → Econ. Administrativa
+ {"codigo":"32","componente":"6"}, // Plan de Calidad → Econ. Administrativa
+ {"codigo":"33","componente":"6"}, // Plan de Mejoramiento → Econ. Administrativa
+ {"codigo":"34","componente":"1"}, // Metodología → Propedéutico
+ {"codigo":"35","componente":"6"}, // Plan de Integración → Econ. Administrativa
+ {"codigo":"36","componente":"6"}, // Plan de Seguridad → Econ. Administrativa
+ {"codigo":"37","componente":"4"}, // Juego → Ing. Aplicada
+ {"codigo":"38","componente":"4"}, // Aplicación Stand Alone → Ing. Aplicada
+ {"codigo":"39","componente":"4"}, // Aplicación Multiplataforma → Ing. Aplicada
+ {"codigo":"40","componente":"4"}, // Diseño de Navegación → Ing. Aplicada
+ {"codigo":"41","componente":"6"}, // CRM → Econ. Administrativa
+ {"codigo":"42","componente":"1"}, // Metodología para Implementar una Norma → Propedéutico
+ {"codigo":"43","componente":"6"}, // Estudio de Viabilidad → Econ. Administrativa
+ {"codigo":"44","componente":"2"}, // Modelo de Optimización → Ciencias Básicas
+ {"codigo":"45","componente":"4"}, // Aplicación Web → Ing. Aplicada
+ {"codigo":"46","componente":"4"}, // Aplicación Empotrada → Ing. Aplicada
+ {"codigo":"47","componente":"4"}, // Modelo Arquitectónico → Ing. Aplicada
+ {"codigo":"48","componente":"4"}, // Sistema de Gestión de Conocimiento → Ing. Aplicada
+ {"codigo":"49","componente":"3"}, // Patrón de Diseño → Básica Ingeniería
+ {"codigo":"50","componente":"1"}, // Propuesta de Investigación → Propedéutico
+ {"codigo":"51","componente":"4"}, // Red Implementada → Ing. Aplicada
+ {"codigo":"52","componente":"4"}, // Simulación → Ing. Aplicada
+ {"codigo":"53","componente":"2"}, // Modelado Matemático → Ciencias Básicas
+ {"codigo":"54","componente":"6"}, // Plan de Gestión → Econ. Administrativa
+ {"codigo":"55","componente":"3"}, // Análisis de un sistema → Básica Ingeniería
+ {"codigo":"56","componente":"3"}, // Diseño de un Sistema → Básica Ingeniería
+ {"codigo":"57","componente":"6"}  // Estado Financiero → Econ. Administrativa
+]
+
