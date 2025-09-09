@@ -1,162 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Graphics/scatter_plot.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - Resultados Académicos</title>
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-        
-    <title>Document</title>
+  <!-- Highcharts -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/packed-bubble.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background:#f5f7fb; }
+    h1 { text-align:center; }
+    form { background:#fff; padding:12px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.06); display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-bottom:12px; }
+    label { font-size:14px; display:block; margin-bottom:6px; }
+    select, button { padding:8px 10px; border-radius:6px; border:1px solid #ccc; font-size:14px; }
+    .components { display:flex; gap:12px; flex-direction:column; }
+    #container { width:90%; max-width:1200px; height:520px; margin: 12px auto; background:#fff; border-radius:8px; padding:8px; box-shadow:0 2px 6px rgba(0,0,0,.06); }
+    .controls { display:flex; justify-content:center; gap:12px; margin-top:8px; }
+    .status { text-align:center; color:#666; margin-top:6px; }
+    .hidden { display:none; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Subsistema de visualización estadistica</h1>
-        <h2>Gestion de resultados de aprendizaje</h2>
-    </header>
-    <main>
-        <div class="carrer">
-            <label for="">Proyecto curricular</label>
-            <select name="" id="select_project" onchange="validateOptions()">
-                <option value="">Seleccione una opcion</option>
-                <option value="578">Tecnología en Sistematización de datos</option>
-                <option value="678">Inegniería telemática</option>
-            </select>
-        </div>
-        <div>
-            <div class="time">
-                <label for="">Periocidad</label>
-                <select name="" id="select_periodicity" onchange="validateOptions()">
-                    <option value="">Seleccione una opcion</option>
-                    <option value="0">Permanencia en semestres</option>
-                    <option value="1">Semestre de ingreso</option>
-                </select>
-            </div>
-            <!-- <div id="div_component" class="component">
-                <label for="">Componente</label>
-                <select name="" id="select_component" onchange="validateOptions()">
-                    <option value="">Seleccione una opcion</option>
-                    <option value="1">Componente Propedéutico</option>
-                    <option value="2">Area Básica de Ingeniería</option>
-                    <option value="3">Area de Ciencias Básicas</option>
-                    <option value="4">Area de Ingeniería Aplicada</option>
-                    <option value="5">Area Socio Humanística</option>
-                    <option value="6">Area Económico Administratriva</option>
-                    <option value="7">Segunda Lengua</option>
-                </select>
-            </div>  -->
-            <div id="div_component" class="component">
-                <label for="">Componente</label>
-                <select name="" id="select_component" onchange="validateOptions()">
-                    <option value="">Seleccione una opcion</option>
-                    <option value="1">Obligatorio Básico</option>
-                    <option value="2">Obligatorio Complementario</option>
-                    <option value="3">Electivo Intrínseco</option>
-                    <option value="4">Componente Propedéutico</option>
-                </select>
-            </div> 
-        </div>
-        
-        <!-- <div class="buttons">
-            <select name="opciones" id="selector">
-                <option value="A" id="area">Boton de area</option>
-                <option value="T" id="time">Boton de Tiempo</option>
-            </select>
-            <button id="btn-enviar">graficar</button>
-        </div>
-        <button id="btn-area">Area</button>
-        <button id="btn-time">Time</button>
-        
-        <div class="graphic">
-            <figure class="highcharts-figure">
-                <div id="container"></div>
-                <p class="highcharts-description">
-                Chart demonstrating using an arearange series in combination with a line                 series. In this case, the arearange series is used to visualize thetemperature range per day, while the line series shows the average                 temperature.
-                </p>
-          </figure>
-        </div>
-        <div class="carrer">
-            <select name="carrer" id="carrer" required>
-                <option value="">Seleccione una opcion</option>
-                <option value="">Año estudiantil</option>
-                <option value="">Permanencia en semestres</option>
-            </select>
-        </div>
-        <div class="type-view">
-            <select name="type-view" id="type-view" required>
-                <option value="">Seleccione una opcion</option>
-                <option value="">Año estudiantil</option>
-                <option value="">Permanencia en semestres</option>
-            </select>
-        </div>
-        <div class="check-box componentes">
-            <input type="checkbox" id="componente_1">
-            <label for="componente_1">Componente 1</label>
-            <br>
-            <input type="checkbox" id="componente_2">
-            <label for="componente_2">Componente 2</label>
-            <br>
-            <input type="checkbox" id="componente_3">
-            <label for="componente_3">Componente 3</label>
-            <br>
-            <input type="checkbox" id="componente_4">
-            <label for="componente_4">Componente 4</label>
-            <br>
-            <input type="checkbox" id="componente_5">
-            <label for="componente_5">Componente 5</label>
-            <br>            
-            <input type="checkbox" id="componente_6">
-            <label for="componente_6">Componente 6</label>
-        </div> -->
-        <!-- High chars -->
-        
-        <figure class="highcharts-figure">
-            <div id="container"></div>
-            <p class="highcharts-description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                Quo amet explicabo nam dolorem consectetur harum sit reiciendis 
-                commodi recusandae labore vitae fugiat quidem perspiciatis aspernatur mollitia quasi, 
-                sint magni. 
-                Ipsa?
-            </p>
-        </figure>
-    </main>
-    <footer>
-        <ul>Creado por:
-            <li>Andres Felipe Olaya Castro</li>
-            <li>Juan Camilo Larrota Ruiz</li>
-        </ul>
-        <p>
-            Universidad Distrital Francisco José de Caldas
-        </p>
-    </footer>
-    <script src="Graphics/scatter_plot.js"></script>
-    <script src="main.js"></script>
-</body>
-<script>
-    let div_component = document.getElementById("div_component");
-    div_component.style = "display:none";
-    function validateOptions(){
-        let project = document.getElementById("select_project").value;
-        let periodicity = document.getElementById("select_periodicity").value;
-        let component = document.getElementById("select_component").value;
+  <h1>Progreso Académico — Visualizador</h1>
 
-        if(project != "" && periodicity != "" /*&& component != ""*/){
-            // alert("Validado");
-            div_component.style = "display:block";
-            if(component != ""){
-                getInfo(project,periodicity,component);
-            }
-        }else{
-            div_component.style = "display:none";
-            div_component.value = "";
-        }
+  <form id="filtersForm">
+    <div>
+      <label for="periodicidad">Periodicidad</label>
+      <select id="periodicidad" name="periodicidad">
+        <option value="0">Semestres (permanencia_en_semestres)</option>
+        <option value="1">Año - Periodo (ano - periodo)</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="proyecto">Proyecto curricular</label>
+      <select id="proyecto" name="proyecto">
+        <option value="578">578 - Tecnología en Sistematización de Datos</option>
+        <option value="678">678 - Ingeniería Telemática</option>
+      </select>
+    </div>
+
+    <div class="components">
+      <label>Componentes (marca 1 o más)</label>
+      <label><input type="checkbox" name="componentes" value="1"> 1 — Obligatorio Básico</label>
+      <label><input type="checkbox" name="componentes" value="2"> 2 — Obligatorio Complementario</label>
+      <label><input type="checkbox" name="componentes" value="3"> 3 — Electivo Intrínseco</label>
+      <label><input type="checkbox" name="componentes" value="4"> 4 — Componente Propedéutico</label>
+    </div>
+
+    <div style="display:flex; align-items:flex-end; gap:8px;">
+      <button type="submit" id="btnApply">Aplicar filtros</button>
+      <button type="button" id="btnPacked">Ver Packed Bubble</button>
+    </div>
+  </form>
+
+  <div id="container"></div>
+  <div class="controls">
+    <button id="prev">⬅️ Anterior</button>
+    <button id="next">➡️ Siguiente</button>
+  </div>
+  <div class="status" id="status">Selecciona filtros y presiona "Aplicar filtros".</div>
+
+<script>
+(function(){
+  // === CONFIG: cambia la URL si tu endpoint es otro ===
+  const API_URL = 'http://localhost:8000/getData.php'; // <-- AJUSTA si es /src/api.php u otro
+  // ===================================================
+
+  const chartTypes = ['column', 'line', 'area', 'bar', 'packedbubble'];
+  let currentIndex = 0;
+  let rawSeries = [];   // series tal como devuelve la API: [{name, data:[{name,value}, ...]}, ...]
+  let transformedSeries = []; // series transformadas para columnas/líneas
+  let categories = [];  // eje x
+
+  const form = document.getElementById('filtersForm');
+  const statusEl = document.getElementById('status');
+  const btnPacked = document.getElementById('btnPacked');
+
+  // Escucha submit del formulario
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    await loadAndRender();
+  });
+
+  // Botón para forzar packedbubble directo
+  btnPacked.addEventListener('click', () => {
+    currentIndex = chartTypes.indexOf('packedbubble');
+    if (rawSeries.length) renderCurrent();
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    if (!rawSeries.length) return;
+    currentIndex = (currentIndex + 1) % chartTypes.length;
+    renderCurrent();
+  });
+  document.getElementById('prev').addEventListener('click', () => {
+    if (!rawSeries.length) return;
+    currentIndex = (currentIndex - 1 + chartTypes.length) % chartTypes.length;
+    renderCurrent();
+  });
+
+  // Cargar datos y preparar series
+  async function loadAndRender() {
+    statusEl.textContent = 'Cargando datos...';
+    const periodicidad = document.getElementById('periodicidad').value;
+    const proyecto = document.getElementById('proyecto').value;
+    const componentes = Array.from(document.querySelectorAll('input[name="componentes"]:checked')).map(ch => ch.value);
+
+    if (componentes.length === 0) {
+      statusEl.textContent = 'Selecciona al menos un componente.';
+      return;
     }
+
+    const payload = {
+      periodicidad: parseInt(periodicidad, 10), // 0 o 1
+      proyecto: proyecto,
+      componentes: componentes
+    };
+
+    try {
+      console.log('POST payload:', payload);
+      const resp = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (!resp.ok) {
+        const text = await resp.text();
+        throw new Error(`HTTP ${resp.status}: ${text}`);
+      }
+
+      const json = await resp.json();
+      console.log('API response:', json);
+
+      // Validar formato esperado
+      if (!json || !Array.isArray(json.series)) {
+        statusEl.textContent = 'Respuesta de la API en formato inesperado. Revisa consola.';
+        console.error('Respuesta inválida. Se esperaba { series: [...] }', json);
+        rawSeries = [];
+        transformedSeries = [];
+        renderEmpty();
+        return;
+      }
+
+      rawSeries = json.series; // guardamos crudo porque packedbubble lo usa
+      if (rawSeries.length === 0) {
+        statusEl.textContent = 'No hay datos para los filtros escogidos.';
+        renderEmpty();
+        return;
+      }
+
+      // Construir categories (preservando primer orden de aparición)
+      categories = buildCategories(rawSeries);
+
+      // Transformar para gráficos tipo column/line/area/bar
+      transformedSeries = transformForXY(rawSeries, categories);
+
+      statusEl.textContent = `Datos cargados. Series: ${rawSeries.length} | Categorías: ${categories.length}`;
+      renderCurrent();
+    } catch (err) {
+      console.error('Error cargando datos:', err);
+      statusEl.textContent = 'Error cargando datos. Revisa la consola (F12).';
+      rawSeries = [];
+      transformedSeries = [];
+      renderEmpty();
+    }
+  }
+
+  // Construye categorías (labels) única lista a partir de rawSeries (preserva primer orden de aparición)
+  function buildCategories(series) {
+    const list = [];
+    const seen = new Set();
+    series.forEach(s => {
+      if (!Array.isArray(s.data)) return;
+      s.data.forEach(pt => {
+        const label = String(pt.name);
+        if (!seen.has(label)) {
+          seen.add(label);
+          list.push(label);
+        }
+      });
+    });
+    return list;
+  }
+
+  // Transforma rawSeries -> series suitable for XY charts,
+  // alineando cada series' data con las categories (rellena null cuando falta)
+  function transformForXY(raw, categories) {
+    return raw.map(s => {
+      const map = {};
+      (s.data || []).forEach(pt => {
+        map[String(pt.name)] = (pt.value !== null && pt.value !== undefined) ? Number(pt.value) : null;
+      });
+      const arr = categories.map(cat => (map.hasOwnProperty(cat) ? map[cat] : null));
+      return { name: s.name || ('Componente'), data: arr };
+    });
+  }
+
+  // Render dependiendo del tipo actual
+  function renderCurrent() {
+    const type = chartTypes[currentIndex];
+    // packedbubble necesita formato original (series con data:{name,value})
+    if (type === 'packedbubble') {
+      Highcharts.chart('container', {
+        chart: { type: 'packedbubble', height: '100%' },
+        title: { text: 'Packed Bubble — Promedio por componente' },
+        tooltip: { useHTML: true, pointFormat: '<b>{point.name}:</b> {point.value}' },
+        plotOptions: {
+          packedbubble: {
+            minSize: '20%',
+            maxSize: '120%',
+            layoutAlgorithm: { splitSeries: false, gravitationalConstant: 0.02 },
+            dataLabels: { enabled: true, format: '{point.name}', style: { textOutline: 'none' } }
+          }
+        },
+        series: rawSeries
+      });
+      return;
+    }
+
+    // XY charts (column, line, area, bar)
+    const seriesXY = transformedSeries;
+    Highcharts.chart('container', {
+      chart: { type: type, height: '100%' },
+      title: { text: `Tipo: ${type} — Promedio por componente` },
+      xAxis: { categories: categories, title: { text: 'Periodo / Semestres' } },
+      yAxis: { title: { text: 'Promedio' }, min: 0 },
+      tooltip: { shared: true, valueDecimals: 2 },
+      plotOptions: { series: { marker: { enabled: true } } },
+      series: seriesXY
+    });
+  }
+
+  function renderEmpty() {
+    document.getElementById('container').innerHTML = '<div style="padding:30px;text-align:center;color:#666">No hay datos para mostrar</div>';
+  }
+
+  // Render inicial vacío
+  renderEmpty();
+
+  // Exponer una función global por si quieres trigger desde consola
+  window.loadAndRender = loadAndRender;
+})();
 </script>
+</body>
 </html>

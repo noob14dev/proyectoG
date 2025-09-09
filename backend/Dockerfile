@@ -8,8 +8,3 @@ COPY . /var/www/html
 
 # Configura el directorio de trabajo
 WORKDIR /var/www/html
-
-# backend/Dockerfile
-ENV MYSQL_DATABASE=nombre
-ENV MYSQL_USER=usuario
-ENV MYSQL_PASSWORD=clave
